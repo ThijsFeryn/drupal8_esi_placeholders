@@ -45,7 +45,7 @@ sub vcl_backend_response {
 ## Inspired by BigPipe
 The [BigPipe](https://www.drupal.org/project/big_pipe) module was my main source of inspiration. Some concepts were used to compose this render strategy.
 
-The [EsiStrategy](/src/Render/Placeholder/EsiStrategy.php) class actually inherits from the `BigPipeStrategy` class, and the [generateBigPipePlaceholderId](/src/Render/Placeholder/EsiStrategy.php#L34) method is implemented in `BigPipeStrategy`.
+The [EsiStrategy](/src/Render/Placeholder/EsiStrategy.php) class actually inherits from the `BigPipeStrategy` class, and the [generateBigPipePlaceholderId](/src/Render/Placeholder/EsiStrategy.php#L45) method is implemented in `BigPipeStrategy`.
 
 The main difference is that the placeholders aren't parsed by Drupal, but by the reverse caching proxy. Another difference is a different markup style for the placeholders.
 
