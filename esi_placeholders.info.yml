@@ -1,0 +1,4 @@
+name: ESI placeholder strategy module
+type: module
+description: Replace placeholders with ESI tags
+core: 8.x

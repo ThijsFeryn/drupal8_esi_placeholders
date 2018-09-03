@@ -1,0 +1,13 @@
+services:
+  esi:
+    class: Symfony\Component\HttpKernel\HttpCache\Esi
+  esi_placeholders.esi_subscriber:
+    class: Drupal\esi_placeholders\EventSubscriber\EsiSubscriber
+    arguments: ['@esi']
+    tags:
+      - { name: event_subscriber }
+  esi_placeholders.placeholder_strategy.esi:
+    class: Drupal\esi_placeholders\Render\Placeholder\EsiStrategy
+    arguments: ['@request_stack','@esi']
+    tags:
+      - { name: placeholder_strategy, priority: 0 }

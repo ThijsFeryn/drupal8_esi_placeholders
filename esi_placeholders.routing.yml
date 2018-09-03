@@ -1,0 +1,7 @@
+esi_placeholders.esi_block_rendering:
+  path: '/esi/block'
+  defaults:
+    _controller: '\Drupal\esi_placeholders\Controller\EsiController:returnEsiBlockContent'
+    _title: 'ESI content'
+  requirements:
+    _permission: 'access content'
