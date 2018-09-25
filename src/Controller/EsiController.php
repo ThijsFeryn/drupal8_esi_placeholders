@@ -9,6 +9,7 @@ class EsiController extends ControllerBase
 {
     public function returnEsiBlockContent(Request $request)
     {
+        // @todo validate $request->get('callback') and $request->get('args'), using private key + salt.
         $build = [
             'esiBlockContent' => [
                 '#lazy_builder' => [
