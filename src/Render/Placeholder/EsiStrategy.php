@@ -36,6 +36,13 @@ class EsiStrategy extends BigPipeStrategy
         $request = $this->requestStack->getCurrentRequest();
         $overridenPlaceHolder = [];
         foreach ($placeholders as $placeholder => $placeholder_elements) {
+            // ESI works at the HTML tag level. But placeholders can also be
+            // HTML tag attribute values!
+            // @see \Drupal\big_pipe\Render\Placeholder\BigPipeStrategy::doProcessPlaceholders()
+            if (!static::placeholderIsAttributeSafe($placeholder)) {
+                continue;
+            }
+
             if (isset($placeholder_elements['#lazy_builder']) && $this->esi->hasSurrogateCapability($request)) {
                 $overridenPlaceHolder[$placeholder] = [
                     '#markup' =>
