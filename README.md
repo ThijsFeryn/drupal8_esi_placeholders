@@ -1,7 +1,7 @@
 # ESI placeholder strategy for Drupal 8
 This Drupal 8 module offers a placeholder strategy that renders [Edge Side Includes](https://en.wikipedia.org/wiki/Edge_Side_Includes).
 
-> This is a proof of concept that still requires a bit of work. Read the improvements section. Help and pull requests would be appreciated.
+> :warning: This is a proof of concept that still requires a bit of work. Read the improvements section. Help and pull requests would be appreciated.
 
 ## How does ESI work?
 
